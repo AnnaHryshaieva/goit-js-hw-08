@@ -82,3 +82,8 @@ const markup = images
   .join('');
 
 gallery.insertAdjacentHTML('afterbegin', markup);
+
+gallery.addEventListener('click', event => {
+  event.preventDefault();
+  console.log(event.target.dataset.source);
+});
