@@ -104,18 +104,18 @@ function showModal() {
 `,
     {
       onShow: () => {
-        document.addEventListener('keydown', OnModalClose);
+        document.addEventListener('keydown', onModalClose);
       },
 
       onClose: () => {
-        document.removeEventListener('keydown', OnModalClose);
+        document.removeEventListener('keydown', onModalClose);
       },
     }
   );
 
   instance.show();
 
-  function OnModalClose(event) {
+  function onModalClose(event) {
     if (event.code === 'Escape') {
       instance.close();
     }
